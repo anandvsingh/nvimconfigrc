@@ -39,6 +39,8 @@ return require('packer').startup(function(use)
 	use ('nvim-treesitter/playground')
 	use ('ThePrimeagen/harpoon')
 	use ('nvim-lua/plenary.nvim')
+	use ('mbbill/undotree')
+	use("tpope/vim-fugitive")
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	
