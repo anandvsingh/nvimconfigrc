@@ -51,7 +51,8 @@ return require('packer').startup(function(use)
 	use ('ThePrimeagen/harpoon')
 	use ('nvim-lua/plenary.nvim')
 	use ('mbbill/undotree')
-	use ("tpope/vim-fugitive")
+    use ('nvim-tree/nvim-tree.lua')
+    use ("tpope/vim-fugitive")
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v1.x',
