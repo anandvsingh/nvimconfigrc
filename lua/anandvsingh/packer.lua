@@ -26,14 +26,19 @@ return require('packer').startup(function(use)
 	-- My plugins here
 	-- use 'foo1/bar1.nvim'
 	-- use 'foo2/bar2.nvim'
-	
+
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
-	}	
+	}
 
-	use({ 'rose-pine/neovim', as = 'rose-pine' })
+	use {
+		'folke/noice.nvim',
+		requires = { {'MunifTanjim/nui.nvim'}, {'rcarriga/nvim-notify'} }
+	}
+
+use({ 'rose-pine/neovim', as = 'rose-pine' })
 	use({
 		"folke/trouble.nvim",
 		config = function()
@@ -54,7 +59,7 @@ return require('packer').startup(function(use)
     use ('nvim-tree/nvim-tree.lua')
     use ("tpope/vim-fugitive")
     use ("stevearc/aerial.nvim")
-	use {
+    use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v1.x',
 		requires = {
